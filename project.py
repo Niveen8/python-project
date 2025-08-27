@@ -16,4 +16,18 @@ def show_appointments():
         name, date, time = app 
         print(f"{i}) Name: {name} | Date: {date} | Time: {time}")
     print()  
+def delete_reservation():
+    show_appointments()
+    if not appointments:
+        return
+    try:
+        num = int(input("Please enter your reservation number in order to delete your reservation.: "))
+        if 1 <= num <= len(appointments):
+            removed = appointments.pop(num - 1)
+            print(f"Reservation for {removed[0]} deleted successfully\n")
+        else:
+            print("Invalid number\n")
+    except ValueError:
+        print("Please enter a valid number\n")
+        
 

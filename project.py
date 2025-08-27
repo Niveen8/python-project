@@ -29,5 +29,22 @@ def delete_reservation():
             print("Invalid number\n")
     except ValueError:
         print("Please enter a valid number\n")
-        
+while True:
+    print("1:Add reservation")
+    print("2: Show reservations")
+    print("3: Delete reservation")
+    print("4: Exit")
+    choice = input("Choose an option please: ")
+
+    if choice == "1":
+        Add_reservation()
+    elif choice == "2":
+        show_appointments()
+    elif choice == "3":
+        delete_reservation()
+    elif choice == "4":
+        print("Goodbye!")
+        break
+    else:
+        print("Invalid choice, try again\n")    
 

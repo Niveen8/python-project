@@ -14,7 +14,9 @@ def show_appointments():
     print("Appointments List:") 
     for i, app in enumerate(appointments, start=1):
         name, date, time = app 
-        print(f"{i}) Name: {name} | Date: {date} | Time: {time}")
+        print(f"{i}) Name: {name}")
+        print(f"   Date: {date}")
+        print(f"   Time: {time}\n")
     print()  
 def delete_reservation():
     show_appointments()
@@ -43,7 +45,7 @@ while True:
     elif choice == "3":
         delete_reservation()
     elif choice == "4":
-        print("Goodbye!")
+        print("We are honored by you")
         break
     else:
         print("Invalid choice, try again\n")    
